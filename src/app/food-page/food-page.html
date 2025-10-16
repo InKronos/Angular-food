@@ -1,1 +1,48 @@
-<p>food-page works!</p>
+<app-not-found [visible]="!food" notFoundMessage="Nie znaleziono produktu" resetLinkText="Wróć na strone główną">
+
+</app-not-found>
+@if (food) {
+<div class="container">
+    <img [src]="food.imageUrl" [alt]="food.name">
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{food.name}}
+            </span>
+            <span class="favorite {{food.favorite? '': 'not'}}">
+                ♥︎
+            </span>
+        </div>
+         <div class="rating">
+         <rm-ng-star-rating
+                    [rating]="food.stars"
+                    [starCount]="5"
+                    [size]="'30px'"
+                    [allowHalf]="true"
+                    [readOnly]="true"
+                ></rm-ng-star-rating>   
+    </div>
+    <div class="origins">
+        @for (origin of food.origins; track $index) {
+            <span>
+                {{origin}}
+            </span>
+        }
+    </div>
+    <div class="tags">
+        <app-tags [foodPageTags]="food.tags" justifyContent="start"></app-tags>
+    </div>
+
+    <div class="cook-time">
+        <span>
+            Time to cook about <strong>{{food.cookTime}} </strong>min
+        </span>
+    </div>
+    <div class="price">
+        <span>{{food.price|currency}}</span>
+    </div>
+    <button (click)="addToCart()">Dodaj do koszyka</button>
+    </div>
+   
+</div>
+}

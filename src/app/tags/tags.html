@@ -1,8 +1,17 @@
 @if (tags) {
-    <div>
+    <div [style.justifyContent]="justifyContent">
         @for (tag of tags; track $index) {
             <a href="" routerLink="/tag/{{tag.name}}">
                 {{tag.name}}({{tag.count}})
+            </a>
+        }
+    </div>
+}
+@if (foodPageTags) {
+    <div [style.justifyContent]="justifyContent">
+        @for (tagName of foodPageTags; track $index) {
+             <a href="" routerLink="/tag/{{tagName}}">
+                {{tagName}}
             </a>
         }
     </div>

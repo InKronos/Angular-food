@@ -1,6 +1,6 @@
 <app-search></app-search>
 <app-tags></app-tags>
-
+<app-not-found [visible]="!foods || foods.length <= 0" restLinkText="Zresetuj Wyszukiwanie"></app-not-found>
 <ul>
     @for (food of foods; track $index) {
     <li>

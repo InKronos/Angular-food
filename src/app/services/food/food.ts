@@ -20,6 +20,11 @@ export class Food {
       { name: 'Salad', count: 1 },
     ]; 
   }
+
+  getFoodById(id: number): FoodModel{
+    return this.getAll().find(food => food.id == id)!;
+  }
+
   getAllFoodsBySearchTerm(searchTerm: string) : FoodModel[]{
     return  this.getAll().filter(food => food.name.toLowerCase().includes(searchTerm.toLowerCase()));
   }
