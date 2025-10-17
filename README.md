@@ -13,6 +13,6 @@ This project is from tutorial,  It contains 3 pages, Home, Food Page and Cart Pa
 
 ## Screens
 
-![Home page](https://github.com/InKronos/Angular-food/HomePage.png?raw=true)
-![Food page](https://github.com/InKronos/Angular-food/FoodPage.png?raw=true)
-![Cart page](https://github.com/InKronos/Angular-food/CartPage.png?raw=true)
+![Home page](https://github.com/InKronos/Angular-food/blob/master/assets/HomePage.png?raw=true)
+![Food page](https://github.com/InKronos/Angular-food/blob/master/assets/FoodPage.png?raw=true)
+![Cart page](https://github.com/InKronos/Angular-food/blob/master/assets/CartPage.png?raw=true)
